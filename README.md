@@ -7,7 +7,7 @@ Solve a 9×9 puzzle by entering your moves, and the game checks for valid moves 
 
 ---
 
-[Sample Output](exampleOutput.txt)
+[Sample Output](sudokuGame/exampleOutput.txt)
 
 ---
 
