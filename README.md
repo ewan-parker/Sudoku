@@ -19,7 +19,7 @@ Solve a 9×9 puzzle by entering your moves, and the game checks for valid moves 
 
 ---
 
-## SudokuSolver
+## SudokuSolver:
 A **backtracking-based solver** for Sudoku puzzles.  
 Given a partially filled 9×9 board, it can automatically find a solution if one exists.
 
