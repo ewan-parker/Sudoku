@@ -15,6 +15,8 @@ Solve a 9×9 puzzle by entering your moves, and the game checks for valid moves 
 
 [Example output](Sudoku/SudokuGameExampleRun)
 
+<sub>Note: Example output uses board 1 from [SudokuBoards.txt](Sudoku/src/sudokuBoards.txt) </sub>
+
 ---
 
 ## SudokuSolver
@@ -29,6 +31,7 @@ Given a partially filled 9×9 board, it can automatically find a solution if one
 
 [Example output](Sudoku/SolverExampleRun)
 
+<sub>Note: Example output uses board 1 from [SudokuBoards.txt](Sudoku/src/sudokuBoards.txt) </sub>
 
 
 
