@@ -1,8 +1,74 @@
 package sudokuGame;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class SudokuGame {
+	
+	public static int[][] boardLoader(String sudokuBoardsFile, int puzzleOption) {
+		
+		
+		
+		ArrayList<int[][]> boards = new ArrayList<>();
+        
+        
+        try {
+        	Scanner sc = new Scanner(new File("sudokuBoards.txt"));
+        	
+        	while (sc.hasNextLine()) {
+        		String line = sc.nextLine().trim();
+        		
+        		if (line.isEmpty()) {
+        			continue;
+        		}
+        		
+        		
+        		
+        		if (!line.isEmpty()) {
+        			
+        			int[][] board = new int[9][9];
+        			
+        			for (int i = 0; i < 9; i++) {
+        				for (int j = 0; j < 9; j++) {
+        					
+        					board[i][j] = Character.getNumericValue(line.charAt(i*9 + j));
+        				}
+        			}
+        			
+        			boards.add(board);
+        			
+        		}
+
+        		
+        		
+        		
+        	}
+        	
+        	
+        	sc.close();
+        } catch (FileNotFoundException e) {
+        	System.out.println("Error: sudokuBoards.txt not found!");
+        	return null;
+        }
+        
+        if (boards.isEmpty()) {
+        System.out.println("No boards found in the sudokuBoards.txt file");
+        return null;
+        }
+        
+         
+        if (puzzleOption < 1 || puzzleOption > boards.size()) {
+        	System.out.println("Invalid puzzle number. Must be 1-" + boards.size());
+        	return null;
+        }
+
+      
+        return boards.get(puzzleOption - 1);
+        
+		
+	}
 	
 	public static boolean validMoveCheck(int[][] board, int row, int column, int entry) {
 		
@@ -172,18 +238,28 @@ public class SudokuGame {
 	
 		
 		
-		int[][] board = {
-				{5,0,8,0,0,9,4,0,0,},
-				{0,0,1,5,0,0,3,8,0,},
-				{0,0,0,0,0,1,0,0,0,},
-				{0,0,0,0,0,0,0,0,0,},
-				{8,0,0,0,0,0,0,2,9,},
-				{3,0,0,0,0,7,0,0,0,},
-				{9,3,0,8,2,0,0,5,7,},
-				{0,4,0,0,7,0,0,9,0,},
-				{0,0,0,0,5,0,0,3,0,},
+		Scanner input = new Scanner(System.in);
 				
-		};
+		int puzzleOption = 0;
+		
+		while (puzzleOption < 1 || puzzleOption > 6) {
+			
+        System.out.print("Pick a puzzle number (1-6): ");
+    
+        
+        if (input.hasNextInt()) {
+            puzzleOption = input.nextInt();
+        } else {
+            System.out.println("Please enter a number!");
+            input.next(); // clear invalid input
+        }
+    }
+		
+		System.out.println(" ");
+
+    int[][] board = boardLoader("sudokuBoards.txt", puzzleOption);
+    
+	
 		
 		while(true) {
 			
@@ -208,9 +284,6 @@ public class SudokuGame {
 			
 			
 		}
-		
-		
-
 	}
 
 }
