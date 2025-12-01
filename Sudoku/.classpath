@@ -6,7 +6,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry excluding="resources/|resources/fonts/" kind="src" path="src"/>
-	<classpathentry including="fonts/**" kind="src" path="src/resources"/>
+	<classpathentry including="fonts/**|images/**" kind="src" path="src/resources"/>
 	<classpathentry kind="lib" path="C:/Users/ewana/JavaFX/javafx-sdk-21.0.9/lib/javafx.base.jar">
 		<attributes>
 			<attribute name="module" value="true"/>

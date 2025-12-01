@@ -260,56 +260,8 @@ import java.util.Scanner;
 	}
 	
 	
-	//Main method for console use.
-	public static void main(String[] args) {
-
-		Scanner input = new Scanner(System.in);
-				
-		int puzzleOption = 0;
-		
-		while (puzzleOption < 1 || puzzleOption > 6) {
-			
-        System.out.print("Pick a puzzle number (1-6): ");
-    
-        
-	        if (input.hasNextInt()) {
-	            puzzleOption = input.nextInt();
-	        } else {
-	            System.out.println("Please enter a number!");
-	            input.next(); // clear invalid input
-	        }
-		}
-		
-		System.out.println(" ");
-
-		int[][] board = boardLoader("sudokuBoards.txt", puzzleOption);
-    
 	
-		
-		while(true) {
-			
-			printBoard(board);
-			
-			int[] move = move();
-			int row = move[0];
-			int column = move[1];
-			int entry = move[2];
-			
-			if (validMoveCheck(board, row, column, entry)) {
-				board[row][column] = entry;
-				
-				if (puzzleSolved(board)) {
-					printBoard(board);
-					System.out.println("You Solved The Sudoku! Congratulations!!");
-					break;
-				}
-			} else 
-				System.out.println("Illegal move. Look Closely.");
-			
-			
-			
-		}
-	}
+
 
 }
 
