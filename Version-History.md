@@ -4,8 +4,10 @@ This is where I track the updates I made to the game!
 
 ## Console Version (Version 0.5)
 - Console based game with space input
-
-  SudokuGame.java Example output:
+  
+⚠️ Now deleted.
+  
+[Console Version Example Output](ConsoleVersionOutput)
 
   
 
