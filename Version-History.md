@@ -40,5 +40,21 @@ This is where I track the updates I made to the game!
   
 <img width="1520" height="938" alt="Screenshot 2025-12-01 014429" src="https://github.com/user-attachments/assets/63709e75-1315-477c-970b-e0ad7c18e24f" />
 
-## Version 1.3 `December 1st`
+## Version 1.3 `December 1st, AM`
 -Game logic fix. `Check` & `Solve` Now work as intended.
+
+# Version 1.4 `December 1st, PM`
+- `Check all` button has been added.
+- Switched to java 17 and simplified the program to be easily downloaded.
+- Centered the board
+- Added a bunch more boards! The difficulty scales with board number.
+  - 1-4 Very Easy
+  - 5-8 Easy
+  - 9-12 Intermediate
+  - 13-16 Upper-Intermediate
+  - 17-20 Hard
+  - 21-24 Hardest
+
+<img width="1413" height="938" alt="Screenshot 2025-12-01 184538" src="https://github.com/user-attachments/assets/31e203da-c5f8-40ff-bc62-fc9eec254200" />
+
+
