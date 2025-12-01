@@ -36,4 +36,6 @@ This is where I track the updates I made to the game!
   - Inputs the correct number and makes the box blue.
   -  A cell is not editable after you click solve.
   
+⚠️ Game logic has fallen apart. Shown by validation colours below...
+  
 <img width="1520" height="938" alt="Screenshot 2025-12-01 014429" src="https://github.com/user-attachments/assets/63709e75-1315-477c-970b-e0ad7c18e24f" />
