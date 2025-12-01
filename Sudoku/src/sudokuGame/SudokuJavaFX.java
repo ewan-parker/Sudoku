@@ -29,6 +29,11 @@ public class SudokuJavaFX extends Application {
 	private int lastRow = -1;
 	private int lastCol = -1;
 	
+    // NEW — make model, board and solution fields so handlers can update them
+    private SudokuGame model;
+    private int[][] board;
+    private int[][] solution;
+	
 	
     @Override
     public void start(Stage stage) {
@@ -47,12 +52,13 @@ public class SudokuJavaFX extends Application {
         sudokuFont = Font.font("Monospaced", javafx.scene.text.FontWeight.BOLD, 48);
     	}
 
-        SudokuGame model = new SudokuGame(1);
-        int[][] board = model.getBoard();
-        
-        int[][] solution = SudokuSolver.copyBoard(board);
-        SudokuSolver.solve(solution); // now solution[][] has the completed puzzle
+        model = new SudokuGame(1);
+        board = model.getBoard();
 
+        solution = SudokuSolver.copyBoard(board);
+        SudokuSolver.solve(solution); // solution field now holds the solved board
+        
+        
         GridPane grid = new GridPane();
         
         TextField[][] allCells = new TextField[9][9];
@@ -179,7 +185,7 @@ public class SudokuJavaFX extends Application {
         		puzzleOptions.add(i);
         	}
 
-        	// 3️⃣ Create the ChoiceDialog
+        	
         	ChoiceDialog<Integer> dialog = new ChoiceDialog<>(1, puzzleOptions);
         	dialog.setTitle("Select Puzzle");
         	dialog.setHeaderText("Pick a puzzle to play:");
@@ -198,13 +204,16 @@ public class SudokuJavaFX extends Application {
         	Optional<Integer> result = dialog.showAndWait();
         	result.ifPresent(puzzleNum -> {
         		// Create new game model
-        		SudokuGame newGame = new SudokuGame(puzzleNum);
-        		int[][] newBoard = newGame.getBoard();
-        		int[][] newSolution = SudokuSolver.copyBoard(newBoard);
-        		SudokuSolver.solve(newSolution);
+        		// Create and assign new model
+        		model = new SudokuGame(puzzleNum);
+        		board = model.getBoard();
 
-        		// Fill the grid like the first time
-        		fillGrid(grid, allCells, newBoard, newSolution);
+        		// update the solution field (overwrite)
+        		solution = SudokuSolver.copyBoard(board);
+        		SudokuSolver.solve(solution);
+
+        		// Fill the grid with the new board (this uses allCells)
+        		fillGrid(grid, allCells, board, solution);
         	});
         });
         
