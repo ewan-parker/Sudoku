@@ -97,7 +97,7 @@ import java.util.Scanner;
 		
 	}
 	
-	public static boolean validMoveCheck(int[][] board, int row, int column, int entry) {
+	public boolean validMoveCheck(int[][] board, int row, int column, int entry) {
 		
 		
 		//Check all rows:
@@ -128,7 +128,7 @@ import java.util.Scanner;
 		return true; //Move was valid.
 	}
 	
-	public static int[] move() {
+	public int[] move() {
 		
 		
 		Scanner sc = new Scanner(System.in);
@@ -148,7 +148,7 @@ import java.util.Scanner;
 		
 	}
 
-	public static void printBoard(int[][] board) {
+	public void printBoard(int[][] board) {
 		
 		System.out.println("Index|  1  2  3 | 4  5  6 | 7  8  9");
 		for (int i = 0; i < 9; i++) {
@@ -182,7 +182,7 @@ import java.util.Scanner;
 		System.out.printf("%n-----------------------------------%n%n");
 	}
 	
-	public static boolean puzzleSolved(int[][] board) {
+	public boolean puzzleSolved(int[][] board) {
 		
 		//Check the rows:
 		for (int i = 0; i < 9; i++) {
@@ -260,6 +260,7 @@ import java.util.Scanner;
 	}
 	
 	
+	//Main method for console use.
 	public static void main(String[] args) {
 
 		Scanner input = new Scanner(System.in);
