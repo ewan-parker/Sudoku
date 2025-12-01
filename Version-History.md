@@ -2,6 +2,14 @@
 
 This is where I track the updates I made to the game!
 
+## Console Version (Version 0.5)
+- Console based game with space input
+
+  SudokuGame.java Example output:
+
+  
+
+
 ## Version 1.0
 - Prints a board.
 - Lets user type any input and doesnt validate.
