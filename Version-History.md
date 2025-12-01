@@ -29,7 +29,11 @@ This is where I track the updates I made to the game!
 
 ## Version 1.2 `December 1st`
 - Added a background
-- `New Game` Button now works; scans SudokuBoards.txt file in resources for boards to select from. Includes mistletoe.
-- `Solve` Button now works. Inputs the correct number and makes the box blue. A cell is not editable after you click solve.
+- `New Game` Button now works;
+  - scans SudokuBoards.txt file in resources for boards to select from.
+  -  Includes mistletoe.
+- `Solve` Button now works.
+  - Inputs the correct number and makes the box blue.
+  -  A cell is not editable after you click solve.
   
 <img width="1520" height="938" alt="Screenshot 2025-12-01 014429" src="https://github.com/user-attachments/assets/63709e75-1315-477c-970b-e0ad7c18e24f" />
