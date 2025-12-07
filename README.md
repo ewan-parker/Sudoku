@@ -1,5 +1,5 @@
 # Java Sudoku
-A sudoku project I made to practice Java. 
+A sudoku project I made to practice Java & JavaFX
 
 <img width="1413" height="938" alt="image" src="https://github.com/user-attachments/assets/c56868ba-94fd-4187-9423-ccfc1430f26f" />
 
