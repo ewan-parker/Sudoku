@@ -3,7 +3,7 @@ A sudoku project I made to practice Java & JavaFX
 
 <img width="1413" height="938" alt="image" src="https://github.com/user-attachments/assets/c56868ba-94fd-4187-9423-ccfc1430f26f" />
 
-## Features
+## Features:
 - 24 boards
   - 1-4 Very Easy
   - 5-8 Easy
@@ -25,3 +25,7 @@ A sudoku project I made to practice Java & JavaFX
 - `Check` button.
   - Functions like check all for the last cell clicked
 
+## Future:
+
+- Note entries
+- Timer
