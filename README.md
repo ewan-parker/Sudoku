@@ -1,6 +1,8 @@
 # Java Sudoku
 A sudoku project I made to practice Java. 
 
+<img width="1413" height="938" alt="image" src="https://github.com/user-attachments/assets/c56868ba-94fd-4187-9423-ccfc1430f26f" />
+
 ## Features
 - 24 boards
   - 1-4 Very Easy
@@ -22,9 +24,4 @@ A sudoku project I made to practice Java.
  
 - `Check` button.
   - Functions like check all for the last cell clicked
-     
-
-### A screenshot of the current UI
-
-<img width="1413" height="938" alt="image" src="https://github.com/user-attachments/assets/c56868ba-94fd-4187-9423-ccfc1430f26f" />
 
