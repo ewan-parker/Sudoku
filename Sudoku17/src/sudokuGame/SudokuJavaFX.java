@@ -33,7 +33,7 @@ public class SudokuJavaFX extends Application {
 	private int lastRow = -1;
 	private int lastCol = -1;
 	
-    // NEW — make model, board and solution fields so handlers can update them
+  
     private SudokuGame model;
     private int[][] board;
     private int[][] solution;
@@ -80,12 +80,12 @@ public class SudokuJavaFX extends Application {
                 cell.setPadding(new Insets(10));
                 cell.setFont(sudokuFont);
             
-                // Restrict input to a single digit 1-9
+                //single digit 1-9
                 TextFormatter<String> formatter = new TextFormatter<>(change -> {
                 	String newText = change.getControlNewText();
-                	if (newText.isEmpty()) return change;          // allow clearing
-                	if (newText.matches("[1-9]")) return change;  // allow 1-9
-                	return null;                                  // reject anything else
+                	if (newText.isEmpty()) return change;         
+                	if (newText.matches("[1-9]")) return change;  
+                	return null;                                
                 });
                 cell.setTextFormatter(formatter);
 
@@ -189,7 +189,7 @@ public class SudokuJavaFX extends Application {
         		if (!line.isEmpty()) totalBoards++;
         	}
 
-        	//Creates a list of puzzle numbers dynamically
+        	
         	List<Integer> puzzleOptions = new ArrayList<>();
         	for (int i = 1; i <= totalBoards; i++) {
         		puzzleOptions.add(i);
@@ -242,14 +242,14 @@ public class SudokuJavaFX extends Application {
         	if (cell.isEditable()) {
         		int value = solution[lastRow][lastCol];
         	cell.setText(String.valueOf(value));
-        	cell.setEditable(false);  // make it non-editable after solving
+        	cell.setEditable(false);  // make it non editable after solving
 
         	double topWidth = (lastRow % 3 == 0) ? 3 : 0.5;
         	double leftWidth = (lastCol % 3 == 0) ? 3 : 0.5;
         	double bottomWidth = (lastRow == 8) ? 3 : 0.5;
         	double rightWidth = (lastCol == 8) ? 3 : 0.5;
 
-        		// Light blue for solved-by-button
+        		// Light blue for solved by  button
         	cell.setStyle(getCellStyle(topWidth, rightWidth, bottomWidth, leftWidth, "lightblue", cell.getFont()));
         	
         	}
@@ -302,7 +302,7 @@ public class SudokuJavaFX extends Application {
 
         StackPane stack = new StackPane();
         if (bgView != null) stack.getChildren().add(bgView); // background at bottom
-        stack.getChildren().add(root); // BorderPane with toolbar + grid on top
+        stack.getChildren().add(root); // BorderPane with toolbar, grid on top
 	
         stage.getIcons().add(new Image(getClass().getResourceAsStream("/images/christmasIcon.png")));
         
@@ -350,7 +350,7 @@ public class SudokuJavaFX extends Application {
 	        for (int col = 0; col < 9; col++) {
 	            TextField cell = allCells[row][col];
 	
-	            // Restrict input to a single digit 1-9
+	           
 	            TextFormatter<String> formatter = new TextFormatter<>(change -> {
 	                String newText = change.getControlNewText();
 	                if (newText.isEmpty()) return change;
